@@ -101,6 +101,6 @@ else
     if [ "$outputtype" == "Aonly" ]; then
         sudo $toolsdir/mkuserimg_mke2fs.py "$systemdir/system" "$output" ext4 "/system" $syssize $fcontexts -j "0" -T "1230768000" -L "system" -I "256" -M "/system" -m "0"
     else
-        sudo $toolsdir/mkuserimg_mke2fs.py "$systemdir/" "$output" ext4 "/" $syssize $fcontexts -j "0" -T "1230768000" -L "/" -I "256" -M "/" -m "0"
+        sudo $toolsdir/mkuserimg_mke2fs.py "$systemdir/" "$output" ext4 "/" $syssize $fcontexts -L "/" -M "/"
     fi
 fi
