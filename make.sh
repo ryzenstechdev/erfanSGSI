@@ -210,7 +210,7 @@ if [ "$outputtype" == "Aonly" ]; then
 fi
 
 date=`date +%Y%m%d`
-outputname="$romtypename-$outputtype-$sourcever-$date-ErfanGSI-Tosasitill0202&0227"
+outputname="$romtypename-$outputtype-$sourcever-$date-ErfanGSI"
 outputimagename="$outputname".img
 outputtextname=build_info.txt
 if [ "$4" == "" ]; then
