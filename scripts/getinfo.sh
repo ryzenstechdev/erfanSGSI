@@ -24,9 +24,7 @@ codename=$(grep -oP "(?<=^ro.product.device=).*" -hs "$SYSTEMDIR"/build*.prop | 
 [[ -z "${codename}" ]] && codename=$(echo $fingerprint | cut -d / -f3 | cut -d : -f1 )
 [[ -z "${codename}" ]] && codename=$(grep -oP "(?<=^ro.build.fota.version=).*" -hs "$SYSTEMDIR"/build*.prop | cut -d - -f1 | head -1)
 spl=$(grep -oP "(?<=^ro.build.version.security_patch=).*" -hs "$SYSTEMDIR"/build*.prop | head -1)
-description=$(grep -oP "(?<=^ro.build.description=).*" -hs "$SYSTEMDIR"/build*.prop)
-[[ -z "${description}" ]] && description=$(grep -oP "(?<=^ro.system.build.description=).*" -hs "$SYSTEMDIR"/build*.prop)
-[[ -z "${description}" ]] && description="tosasitill0202&0227"
+
 
 printf "Android 版本: $release
 品牌: $brand
@@ -38,5 +36,5 @@ printf "Android 版本: $release
 Tags: $tags
 安全补丁日期: $spl
 构建指纹信息: $fingerprint
-Be Redesigned By: $description
+Be Redesigned By: Tosasitill0202&0227
 "
