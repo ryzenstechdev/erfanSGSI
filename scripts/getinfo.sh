@@ -33,8 +33,8 @@ printf "Android 版本: $release
 构建类型: $flavor
 构建 ID: $id
 增量 OTA 信息: $incremental
-Tags: $tags
 安全补丁日期: $spl
 构建指纹信息: $fingerprint
+构建标签: $tags
 Be Redesigned By: Tosasitill0202&0227
 "
