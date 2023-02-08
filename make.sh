@@ -315,7 +315,7 @@ bytesToHuman() {
     done
     echo "$b$d ${S[$s]}"
 }
-echo "Raw Image Size: $(bytesToHuman $systemsize)" >> "$outputinfo"
+echo "原镜像合并后大小: $(bytesToHuman $systemsize)" >> "$outputinfo"
 
 echo "Creating Image: $outputimagename"
 # Use ext4fs to make image in P or older!
