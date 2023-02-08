@@ -1,6 +1,8 @@
 #!/bin/bash
 SYSTEMDIR="$1"
 
+date=`date +%Y%m%d`
+
 flavor=$(grep -oP "(?<=^ro.build.flavor=).*" -hs "$SYSTEMDIR"/build*.prop)
 [[ -z "${flavor}" ]] && flavor=$(grep -oP "(?<=^ro.system.build.flavor=).*" -hs "$SYSTEMDIR"/build*.prop)
 [[ -z "${flavor}" ]] && flavor=$(grep -oP "(?<=^ro.build.type=).*" -hs "$SYSTEMDIR"/build*.prop)
@@ -36,5 +38,6 @@ printf "Android 版本: $release
 安全补丁日期: $spl
 构建指纹信息: $fingerprint
 构建标签: $tags
+自动构建日期：$date
 Be Redesigned By: Tosasitill0202&0227
 "
