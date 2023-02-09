@@ -320,6 +320,7 @@ bytesToHuman() {
     echo "$b$d ${S[$s]}"
 }
 echo "原镜像合并后大小: $(bytesToHuman $systemsize)" >> "$outputinfo"
+echo "构建 ROM 类型：$romtype" >> "$outputinfo"
 echo "--------Be redesigned by tosasitll 0202 & 0227--------" >> "$outputinfo"
 
 echo "Creating Image: $outputimagename"
