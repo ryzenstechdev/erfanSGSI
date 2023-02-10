@@ -135,6 +135,7 @@ if [ $MOUNTED == false ]; then
     $TOOLS_DIR/Firmware_extractor/extractor.sh "$URL" "$PROJECT_DIR/working" || exit 1
     if [ $CLEAN == true ]; then
         rm -rf "$ZIP_NAME"
+        rm -rf mi_ext.img
     fi
     MOUNT "$PROJECT_DIR/working"
     URL="$PROJECT_DIR/working"
