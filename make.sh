@@ -83,6 +83,7 @@ scriptsdir="$LOCALDIR/scripts"
 echo "Create Temp dir"
 rm -rf $tempdir
 mkdir -p "$systemdir"
+rm -rf mi_ext.img
 
 if [ "$sourcetype" == "Aonly" ]; then
     echo "Warning: Aonly source detected, using P AOSP ramdisk"
