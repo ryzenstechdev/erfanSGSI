@@ -1,7 +1,7 @@
 #!/bin/bash
 SYSTEMDIR="$1"
 
-date=`date +%Y.%m.%d_%H.%M.%S`
+date=`$(TZ='Asia/Shanghai' date +%Y.%m.%d_%H.%M.%S)`
 
 flavor=$(grep -oP "(?<=^ro.build.flavor=).*" -hs "$SYSTEMDIR"/build*.prop)
 [[ -z "${flavor}" ]] && flavor=$(grep -oP "(?<=^ro.system.build.flavor=).*" -hs "$SYSTEMDIR"/build*.prop)
